@@ -1,0 +1,74 @@
+/* Vendor */
+@import "vendor/normalize";
+@import "vendor/swiper.scss";
+/* General */
+@import "general/variables";
+@import "general/functions";
+@import "general/mixins";
+@import "general/fonts";
+@import "general/global";
+@import "general/animations";
+/* Blocks */
+@import "blocks/loader";
+// Общие блоки
+@import "blocks/btn-oval";
+@import "blocks/link-download";
+@import "blocks/cropped-image";
+@import "blocks/switch-btns.scss";
+@import "blocks/social";
+@import "blocks/form.scss";
+@import "blocks/tag.scss";
+@import "blocks/fade.scss";
+// Главные блоки
+@import "blocks/header";
+@import "blocks/main-nav";
+@import "blocks/nav-button";
+@import "blocks/page-short";
+@import "blocks/page-full";
+
+// main
+@import "blocks/main";
+@import "blocks/main-full.scss";
+@import "blocks/partners.scss";
+@import "blocks/go-section.scss";
+@import "blocks/main-about.scss";
+@import "blocks/tracks.scss";
+@import "blocks/headliners.scss";
+@import "blocks/program.scss";
+@import "blocks/contacts.scss";
+@import "blocks/share.scss";
+@import "blocks/faq.scss";
+@import "blocks/popup.scss";
+@import "blocks/popup-container.scss";
+
+// social
+
+// about-short
+@import "blocks/about-short";
+// about-full
+@import "blocks/about-full";
+@import "blocks/project";
+@import "blocks/about-share";
+
+// region-short
+@import "blocks/region-short";
+// region-full
+@import "blocks/region-full";
+@import "blocks/announcement";
+@import "blocks/quesitions";
+// programm-full
+@import "blocks/event";
+@import "blocks/event-structure";
+@import "blocks/event-programm";
+@import "blocks/event-join";
+// programm-full
+@import "blocks/programm-short";
+// contacts
+@import "blocks/contacts-page";
+// buying
+@import "blocks/buying.scss";
+// 404
+@import "blocks/page-404.scss";
+
+// footer
+@import "blocks/footer";

@@ -1,0 +1,166 @@
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show-up {
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes logo {
+  0% {
+    transform: translateY(-200%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes logo-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(-200%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes title {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes main-image-left {
+  0% {
+    opacity: 0;
+    margin-right: -15vw;
+  }
+
+  100% {
+    opacity: 1;
+    margin-right: 0vw;
+  }
+}
+
+@keyframes main-image-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-15vh);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0vh);
+  }
+}
+
+@keyframes main-bg-top {
+  0% {
+    opacity: 0;
+    top: -15vh;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0vh;
+  }
+}
+
+@keyframes burger-dot {
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes show-nav {
+  0% {
+    top: size(-250px);
+  }
+}
+
+@keyframes show-nav-bottom {
+  0% {
+    bottom: size(-250px);
+  }
+}
+
+@keyframes fade-in-color {
+  0% {
+    color: rgba($black, 0);
+  }
+}
+
+@keyframes nav-circle {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes nav-circle-hover {
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes nav-center-text {
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes nav-line {
+  0% {
+    transform: translateX(-50%) scaleX(0);
+  }
+
+  100% {
+    transform: translateX(-50%) scaleX(1);
+  }
+}
+
+@keyframes nav-line-top {
+  0% {
+    transform: translateX(-50%) scaleY(0);
+  }
+
+  100% {
+    transform: translateX(-50%) scaleY(1);
+  }
+}
+
+@keyframes menu-bullet {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}

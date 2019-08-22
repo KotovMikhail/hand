@@ -1,0 +1,62 @@
+extends pug/layout.pug
+
+block header
+
+block content
+
+  section.popup
+    .popup__head
+      .popup__arrows
+        button.popup__arrow.popup__arrow--prev(type="button" aria-label="Стрелка назад")
+          +svg("arrow-right", 25, 16)
+        button.popup__arrow.popup__arrow--next(type="button" aria-label="Стрелка вперед")
+          +svg("arrow-right", 25, 16)
+    .popup__image-block
+      .popup__image
+        img(src="img/main-info5-2@1x.jpg" srcset="img/main-info5-2@2x.jpg 2x" width="688" height="643" alt="Воздушно-инженерная школа")
+      button(type="button" aria-label="Стрелка вправо")
+        +svg("arrow-right", 25, 16)
+    .popup__block-info
+      .popup__block
+        p.popup__tags
+          span.popup__tag.popup__tag--wow wow
+          span.popup__tag Экспонент
+      h2.popup__title Воздушно-инженерная школа
+      .popup__block
+        span.tag.tag--pink Человек
+        button.tag.tag--info(type="button" aria-label="Кнопка Информации")
+          +svg("tag-info", 25, 25)
+          +svg("tag-info-black", 24, 24)
+      .popup__table
+        div
+          p Где
+          p
+            span.link-download.link-download
+              a(href="#" download) Выставочная зона
+        div
+          p Когда
+          p
+            span 31 августа, 13:00–21:00
+            span 1 сентября, 13:00–21:00
+      p.popup__text Воздушно-инженерная школа представляет собой интерактивный стенд с двумя зонами.
+      p.popup__text Первая — представительная, где будут выставлены аппараты участников прошлых лет, команда площадки проводит обзорную лекцию по самому проекту.
+      p.popup__text Вторая зона — интерактивная, где можно попробовать принять телеметрию с нескольких спутников, предназначенных для атмосферного и стратосферного запусков, измерить показания датчиков, а также узнать о проектировании ракет
+      .popup__block.social
+        button.popup__btn.btn-oval(type="button") Посетить фестиваль
+        ul.popup__list.social__list
+          li
+            button( type="button" title="Фейсбук" aria-label="Фейсбук" data-sharer="facebook" data-url="#" )
+              +svg("fb", 16, 16)
+          li
+            button( type="button" title="ВКонтакте" aria-label="ВКонтакте" data-sharer="vk" data-url="#" )
+              +svg("vk", 16, 16)
+          li
+            button( type="button" title="Твиттер" aria-label="Твиттер" data-sharer="twitter" data-url="#" )
+              +svg("twitter", 16, 16)
+      .popup__arrows
+        button.popup__arrow.popup__arrow--prev(type="button" aria-label="Стрелка назад")
+          +svg("arrow-right", 25, 16)
+        button.popup__arrow.popup__arrow--next(type="button" aria-label="Стрелка вперед")
+          +svg("arrow-right", 25, 16)
+
+block footer

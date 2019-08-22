@@ -1,0 +1,127 @@
+html {
+  text-rendering: optimizeLegibility;
+  text-size-adjust: none;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-size: $font-main;
+
+  @include desktop-only {
+    font-size: size-desktop($font-main);
+  }
+}
+
+body {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+
+  min-width: $width-min;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+
+  @include font-xs;
+  font-family: $font-family;
+  font-weight: 400;
+  color: $black;
+
+  background-color: $white;
+
+  &.old {
+    z-index: 1000;
+  }
+}
+
+main {
+  display: none;
+  height: 100%;
+  overflow-y: auto;
+
+  -webkit-overflow-scrolling: touch;
+
+  background-color: $white;
+}
+
+.no-js main,
+main.loaded {
+  display: block;
+}
+
+.has-short main {
+  height: auto;
+  overflow: hidden;
+
+  transition: margin 0.5s ease-in-out;
+
+  @include mobile {
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+
+.is-about main {
+  display: flex;
+  width: 200vw;
+  height: 100%;
+
+  @include mobile {
+    width: auto;
+    display: block;
+  }
+}
+
+.full-shown {
+  main {
+    margin-top: -100vh;
+  }
+
+  &.is-about main {
+    margin-top: 0;
+    margin-left: -100vw;
+  }
+}
+
+.menu-opened main {
+  position: fixed;
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 size-desktop(121px);
+  box-sizing: border-box;
+
+  @include mobile {
+    padding: 0 24px;
+  }
+}
+
+em,
+.font-feature {
+  font-style: normal;
+  font-feature-settings: 'ss01' on;
+}

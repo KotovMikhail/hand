@@ -1,0 +1,144 @@
+.contacts-page {
+  background-color: $white;
+  padding-bottom: size(297px);
+  max-width: calc(100% + 7.5625rem);
+  margin: 0 size(121px);
+
+  @include tablet {
+    padding-bottom: size(96px);
+  }
+
+  @include mobile {
+    margin: 0;
+    padding-bottom: 0;
+  }
+}
+
+.contacts-page h1 {
+  margin: 0;
+  padding-top: size(152px);
+  padding-bottom: size(72px);
+  @include font-xxl;
+
+  @include tablet {
+    text-align: center;
+  }
+
+  @include mobile {
+    padding-top: 140px;
+    padding-bottom: 58px;
+    @include font-medium;
+  }
+}
+
+.contacts-page__list {
+  background-color: $white;
+  min-height: auto;
+}
+
+.contacts-page__col-2 {
+  display: flex;
+  justify-content: flex-start;
+
+  @include tablet {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.contacts-page__col-2-wrapper {
+  width: 50%;
+  flex-grow: 1;
+  max-width: size(610px);
+
+  @include tablet {
+    margin: 0 auto;
+    margin-bottom: 154px;
+    max-width: size(474px);
+  }
+
+  @include mobile {
+    margin-bottom: 157px;
+  }
+}
+
+.contacts-page__table {
+  padding-top: size(94px);
+
+  .contacts__row {
+    min-height: auto;
+    grid-template-columns: size(187px) size(384px);
+    grid-column-gap: size(20px);
+    margin-bottom: size(65px);
+
+    .contacts__tel {
+      @include tablet-small {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    .contacts__name {
+      @include tablet-small {
+        text-align: center;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include mobile {
+      margin-bottom: 79px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include mobile {
+    padding-top: 90px;
+  }
+}
+
+.contacts-page__intro p {
+  width: 100%;
+  max-width: size(400px);
+  margin: 0;
+  margin-bottom: size(45px);
+  @include font-medium;
+
+
+  @include mobile {
+    margin-right: auto;
+    margin-bottom: 25px;
+    margin-left: auto;
+    text-align: center;
+    @include font-small;
+  }
+}
+
+.contacts-page__intro a {
+  display: block;
+  width: 100%;
+  max-width: size(400px);
+  margin: 0;
+  color: $black;
+  text-decoration: none;
+  @include font-medium;
+
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  @include mobile {
+    margin: 0 auto;
+    text-align: center;
+    @include font-small;
+  }
+}

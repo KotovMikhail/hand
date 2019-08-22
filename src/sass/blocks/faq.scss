@@ -1,0 +1,170 @@
+.faq {
+  padding-bottom: 125px;
+  position: relative;
+  background: $white;
+  z-index: 10;
+
+  @include mobile {
+    min-height: auto;
+    padding-bottom: 95px;
+  }
+}
+
+.faq__title {
+  margin: 0;
+  padding-top: size-vh(73px, $height-desktop);
+  padding-bottom: size-vh(32px, $height-desktop);
+  background: $white;
+  @include font-xxl();
+  position: relative;
+  z-index: 2;
+
+  @include mobile {
+    padding-top: 52px;
+    @include font-medium();
+    text-align: center;
+    padding-bottom: 35px;
+  }
+}
+
+.faq__acc {
+  display: flex;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.faq__col {
+  width: size-desktop(486px);
+  flex-shrink: 0;
+  margin-right: size-desktop(124px);
+  box-sizing: border-box;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.faq__block {
+  border-bottom: 2px solid $black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &--opened {
+    .faq__question span {
+      svg:last-of-type {
+      opacity: 1;
+    }
+
+      svg:first-of-type {
+        opacity: 0;
+      }
+    }
+
+    .faq__answer {
+      display: block;
+      opacity: 1;
+    }
+
+  }
+
+  @include mobile {
+    padding-bottom: 18px;
+  }
+}
+
+.faq__question {
+  margin: 0;
+  padding-top: size-vh(16px, $height-desktop);
+  padding-bottom: size-vh(24px, $height-desktop);
+  padding-right: size-desktop(65px);
+  @include font-small();
+  position: relative;
+  width: 100%;
+  background: $white;
+  z-index: 2;
+  cursor: pointer;
+
+  span {
+    display: inline-block;
+    width: 47px;
+    height: 33px;
+    position: absolute;
+    right: 0;
+    top: size-vh(16px, $height-desktop);
+    @include oval-hover();
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.3s $transition;
+    }
+
+    svg:last-of-type {
+      opacity: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url('../img/oval.svg') no-repeat center;
+      background-size: 100% 100%;
+      background-position: center;
+
+      transition: transform 0.3s;
+      transform-origin: center;
+    }
+  }
+
+  @include mobile {
+    padding-right: 16%;
+    padding-top: 23px;
+    padding-bottom: 18px;
+
+    span {
+      top: 22px;
+    }
+  }
+}
+
+.faq__answer {
+  display: none;
+  margin: 0;
+  position: relative;
+  z-index: -1;
+  opacity: 0;
+  background: $white;
+  margin-bottom: size-vh(30px, $height-desktop);
+  padding-top: 2px;
+  padding-right: size-desktop(80px);
+  @include font-xs();
+
+  transition: opacity 0.3s;
+
+  @include mobile {
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.faq__btn {
+  @include button-reset();
+  align-self: flex-start;
+  margin-top: size-vh(16px, $height-desktop);
+}

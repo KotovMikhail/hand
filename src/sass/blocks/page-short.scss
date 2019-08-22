@@ -1,0 +1,114 @@
+.page-short {
+  position: relative;
+  z-index: 0;
+
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  @include mobile {
+    height: auto;
+  }
+}
+
+.is-main .page-short {
+  @include mobile {
+    height: 100vh;
+    min-height: 500px;
+  }
+}
+
+.page-short__content {
+  box-sizing: border-box;
+  padding: size(120px);
+
+  @include tablet {
+    padding: 90px;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 24px;
+    text-align: center;
+  }
+
+  @include mobile-small {
+    padding: 40px;
+  }
+
+  &--bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include mobile {
+      position: relative;
+      height: 100%;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.page-short__title {
+  @include font-xxl;
+  margin: 0;
+
+  @media (max-height: $height-tablet - 1px) {
+    @include font-xl;
+  }
+
+  @media (max-height: 500px) {
+    @include font-medium;
+  }
+
+  @include tablet {
+    @include font-medium;
+
+    @media (max-height: 500px) {
+      @include font-small;
+    }
+  }
+
+  @include mobile-small {
+    @include font-small;
+  }
+}
+
+.animated {
+  .page-short__title {
+    @include animated-title;
+  }
+
+  .page-short::after,
+  .page-short .cropped-image {
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+  }
+
+  .page-short .cropped-image {
+    margin-right: -15vw;
+    opacity: 0;
+    animation-name: main-image-left;
+
+    @include mobile {
+      margin-right: 0;
+      opacity: 1;
+      animation-name: none;
+    }
+  }
+
+  .page-short::after {
+    top: -15vh;
+    opacity: 0;
+    animation-name: main-bg-top;
+  }
+}

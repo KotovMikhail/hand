@@ -1,0 +1,28 @@
+footer.footer
+  .container
+    .footer__top
+      a.footer__link-logo(href="#" target="_blank")
+        img(src="img/footer-logo.svg" width="261" height="40" alt="Интегратор сообществ кружкового движения")
+      .social.footer__social
+        ul.social__list.footer__social-list
+          li: a(href="#" target="_blank" title="Facebook" aria-label="Facebook")
+              +svg("fb", 7, 12)
+          li: a(href="#" target="_blank" title="Vkontakte" aria-label="Vkontakte")
+              +svg("vk-icon", 14, 8)
+          li: a(href="#" target="_blank" title="Twitter" aria-label="Twitter")
+              +svg("twitter", 13, 10)
+          li: a(href="#" target="_blank" title="Instagramm" aria-label="Instagramm")
+              +svg("insta", 12, 12)
+
+    .footer__bottom
+      .footer__developer
+        a(href="#" target="_blank" title="Made by shishki.collective" aria-label="Made by shishki.collective") Made by shishki.collective
+      .footer__links
+        ul.footer__document-list
+          li: a(href="buying.html" title="История закупок" aria-label="История закупок") История закупок
+          li: a(href="#" target="_blank" title="Пользовательское соглашение" aria-label="Пользовательское соглашение") Пользовательское соглашение
+      .footer__copyright 2019, Rukami
+
+  .footer__buttons
+    a( href="#" ) Представить проект
+    a( href="#" ) Посетить фестиваль

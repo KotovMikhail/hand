@@ -1,0 +1,109 @@
+extends pug/layout-full.pug
+
+block variables
+  - var title = "Region";
+
+block short
+  .page-short.region-short
+    .cropped-image.region-short__cropped-image
+      .cropped-image__wrapper.region-short__image-wrapper
+        img( src="img/region-short-bg@1x.jpg" srcset="img/region-short-bg@2x.jpg 2x" width="946" height="799" alt="Улбающийся парень" )
+      +svg("shape-region-short", 775, 799)
+      +svg("shape-region-short-mobile", 375, 487)
+
+    .page-short__content.region-short__content
+      h1 К#[em а]ждый год мы п#[em р]овод#[em и]м ф#[em е]стив#[em а]ли в р#[em е]гионах
+      p В России живут миллионы технологических энтузиастов, инженеров и изобретателей.
+
+    a.nav-button.nav-button--bottom( href="#more" ) Подробнее
+    a.nav-button.nav-button--left( href="main.html" ) Назад
+
+block full
+  .region-full
+    .container
+      p Каждое региональное мероприятие включает в себя отборочный этап Всероссийского конкурса мейкерских проектов. Победители смогут презентовать свои работы на Международном фестивале идей и технологий Rukami в Москве.
+
+      .cropped-image.region-full__cropped-image
+        .cropped-image__wrapper.region-full__image-wrapper
+          picture
+            source(media="(max-width: 767px)" srcset="img/region-full-bg-mobile@1x.png 1x, img/region-full-bg-mobile@2x.png 2x")
+            img( src="img/region-full-bg@1x.png" srcset="img/region-full-bg@2x.png 2x" width="633" height="666" alt="Улыбающийся парень" )
+        +svg("shape-region-full", 1260, 670)
+        +svg("shape-6-mobile", 716, 392)
+
+      h2 Все фестивали #[span Rukami] в&nbsp;регионах
+
+  .announcement
+    ul.announcement__list
+      li
+        a(href="#" target="_blank")
+          p 17–19 мая  |  Челябинск
+          +svg("mark", 100, 39)
+          p Отборочный конкурс технологических энтузиастов
+      li
+        a(href="#" target="_blank")
+          p 17–19 мая  |  Челябинск
+          p Отборочный конкурс технологических энтузиастов
+      li
+        a
+          p 17–19 мая  |  Челябинск
+          p Отборочный конкурс технологических энтузиастов
+      li
+        a(href="#" target="_blank")
+          p 17–19 мая  |  Челябинск
+          p Отборочный конкурс технологических энтузиастов
+      li
+        a(href="#" target="_blank")
+          p 17–19 мая  |  Челябинск
+          p Отборочный конкурс технологических энтузиастов
+      li
+        a(href="#" target="_blank")
+          p 17–19 мая  |  Челябинск
+          p Отборочный конкурс технологических энтузиастов
+      li
+        a(href="#" target="_blank")
+          p 17–19 мая  |  Челябинск
+          p Отборочный конкурс технологических энтузиастов
+      li
+        a(href="#" target="_blank")
+          p 17–19 мая  |  Челябинск
+          p Отборочный конкурс технологических энтузиастов
+      li
+        a(href="#" target="_blank")
+          p 17–19 мая  |  Челябинск
+          p Отборочный конкурс технологических энтузиастов
+      li
+        a(href="#" target="_blank")
+          p 17–19 мая  |  Челябинск
+          p Отборочный конкурс технологических энтузиастов
+      li
+        a(href="#" target="_blank")
+          p 17–19 мая  |  Челябинск
+          p Отборочный конкурс технологических энтузиастов
+      li
+        a(href="#" target="_blank")
+          p 17–19 мая  |  Челябинск
+          p Отборочный конкурс технологических энтузиастов
+
+  section.questions
+    .container
+      h2 Есть вопросы?
+      p Дадим всю информацию касаемо региональных фестивалей и участия в них
+
+      ul.questions__list
+        li
+          h3 Белгород
+          p Мария Тучина
+          a(href="mailto:matuchina.me@rvc.ru" target="blank") matuchina.me@rvc.ru
+        li
+          h3 Новосибирск
+          p Антон Шарыпов
+          a(href="mailto:maharypov.AV@ntifund.rvc.ru" target="blank") maharypov.AV@ntifund.rvc.ru
+        li
+          h3 Иркутск
+          p Антон Шарыпов
+          a(href="mailto:maharypov.AV@ntifund.rvc.ru" target="blank") maharypov.AV@ntifund.rvc.ru
+        li
+          h3 Новосибирск
+          p Антон Шарыпов
+          a(href="mailto:maharypov.AV@ntifund.rvc.ru" target="blank") maharypov.AV@ntifund.rvc.ru

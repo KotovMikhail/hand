@@ -1,0 +1,58 @@
+$width-desktop:   1440px;
+$width-laptop:    1200px;
+$width-tablet-lg: 1024px;
+$width-tablet:     768px;
+$width-mobile:     375px;
+$width-min:        320px;
+
+$width-tablet-media: 1000px;
+
+$height-desktop:   800px;
+$height-tablet:    768px;
+
+$retina-dpi:      144dpi;
+$retina-dppx:    1.5dppx;
+
+$font-family: "Rkm", "Arial", sans-serif;
+$font-main: 16px;
+
+$transition: cubic-bezier(0.77, 0, 0.175, 1);
+$bounce: cubic-bezier(0.5, 2, 0.5, 0.8);
+$light-bounce: cubic-bezier(0.5, 1.3, 0.75, 1);
+
+$black:           #000000;
+$white:           #ffffff;
+$transparent: transparent;
+$gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.159282) 0%, rgba(0, 0, 0, 0.5) 100%);
+
+$woodsmoke:       #121819;
+// ГОЛУБЫЕ
+$seagull:         #79c1ed;
+$bermuda:         #7bdbd3;
+$blizzard-blue:   #9CEDE6;
+$downy:           #6BCBC3;
+// ЖЕЛТЫЕ
+$goldenrod:       #ffd567;
+$salomie:         #FFE08F;
+$casablanca:      #F7BC4A;
+// РОЗОВЫЕ
+$tickle-me-pink:  #FB809D;
+$brink-pink:      #FF6B8E;
+$vivid-tangerine: #FF937D;
+$carnation-pink:  #FF9FB6;
+
+$pomegranate:     #F94B27;
+// ФИОЛЕТОВЫЕ
+$light-wisteria:  #C19FE0;
+$biloba-flower:   #D1B1EE;
+$lavender:        #B372D9;
+// СЕРЫЕ
+$mine-shaft:      #232323;
+$lightgrey:       #979797;
+$white-grey:      #F2F2F2;
+
+$martini:         #ACA09C;
+$soft-peach:      #F0E7E5;
+
+
+

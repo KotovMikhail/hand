@@ -1,0 +1,45 @@
+.fade-in {
+  animation: hideBlock 0.5s forwards;
+  z-index: -1;
+  opacity: 1;
+}
+
+.fade-out {
+  animation: viewBlock 0.5s forwards;
+  z-index: 1;
+  opacity: 1;
+}
+
+@keyframes viewBlock {
+  0% {
+    opacity: 0;
+    transform: translateY(-80%);
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hideBlock {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-80%);
+  }
+}
+

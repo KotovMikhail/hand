@@ -1,0 +1,82 @@
+extends pug/layout.pug
+
+block content
+  section.text-page.contacts-page
+    h1 Контакты
+    .text-page__col-2.contacts-page__col-2
+      .contacts-page__col-2-wrapper
+        .text-page__intro.contacts-page__intro
+          p 123242, Москва,<br> Малый Конюшковский переулок, д. 2
+          a(href="tel:+74957770104") +7 (495) 777 01 04
+          a(href="mailto:nti2035@asi.ru") nti2035@asi.ru
+
+        .contacts.contacts-page__list
+          .contacts__table.contacts-page__table
+
+            .contacts__row.contacts__row--1
+              .contacts__col1
+                p Участие в программе фестиваля
+              .contacts__col2
+                p.contacts__name Антон Шарыпов
+                a.contacts__email(href="mailto:Sharypov.AV@ntifund.rvc.ru") Sharypov.AV@ntifund.rvc.ru
+
+            .contacts__row.contacts__row--2
+              .contacts__col1
+                p Партнёрство
+              .contacts__col2
+                p.contacts__name Елена Субботина
+                p.contacts__tel +7 (919) 770 72 89
+                a.contacts__email(href="mailto:subbotina.El@ntifund.rvc.ru") subbotina.El@ntifund.rvc.ru
+
+            .contacts__row.contacts__row--2
+              .contacts__col1
+                p По вопросам СМИ
+              .contacts__col2
+                p.contacts__name Елена Субботина
+                p.contacts__tel +7 (919) 770 72 89
+                a.contacts__email(href="mailto:rovinskaya.mm@ntifuns.rvc.ru") rovinskaya.mm@ntifuns.rvc.ru
+
+            .contacts__row.contacts__row--2
+              .contacts__col1
+                p Образовательна программа
+              .contacts__col2
+                p.contacts__name Елена Субботина
+                p.contacts__tel +7 (919) 770 72 89
+                a.contacts__email(href="mailto:subbotina.El@ntifund.rvc.ru") subbotina.El@ntifund.rvc.ru
+
+      form.form.contacts-page__form(method="post" enctype="multipart/form-data" action="" autocomplete="off" )
+        fieldset
+          legend Напишите нам
+          .contacts-page__form-wrapper
+
+            .form__item
+              label.visually-hidden(for="name") Ваше имя
+              input(type='text' name="name" id="name" value="" minlength="2" maxlength="30" placeholder="Ваше имя" required)
+              span.error-message Проверьте введённое имя, кажется, там ошибка
+
+            .form__item
+              label.visually-hidden(for="email") E-mail
+              input(type='email' name="e-mail" id="email" pattern="^[^@]+@[^@]+[.]{1}[^@]{2,}$" value="" placeholder="E-mail" required)
+              span.error-message Проверьте введённый e-mail, кажется, там ошибка
+
+            .form__item
+              label.visually-hidden(for="questions") Любой вопрос пожеление или предложение. Обычно мы отвечаем в течение 2-3 дней.
+              textarea(cols="20" rows="2" id="questions" placeholder="Любой вопрос пожеление или предложение. Обычно мы отвечаем в течение 2-3 дней.")
+
+            .form__item
+              input.visually-hidden(type="checkbox" name="checkbox" id="confirm1" value="" required)
+              label.form__label.form__label--checkbox(for="confirm1") Лейбл чекбокса
+
+            .form__item
+              input.visually-hidden(type="checkbox" name="checkbox" id="confirm2" value="" required)
+              label.form__label.form__label--checkbox(for="confirm2") Лейбл чекбокса
+
+            .form__item
+              input.visually-hidden(type="radio" name="radio1" id="radio1" value="" required checked)
+              label.form__label.form__label--radio(for="radio1") Лейбл радио-кнопки
+
+            .form__item
+              input.visually-hidden(type="radio" name="radio1" id="radio2" value="" required)
+              label.form__label.form__label--radio(for="radio2") Лейбл радио-кнопки
+
+            button.btn-oval.btn-oval--main.btn-oval--form(type="submit" aria-label="Отправить данные формы") Отправить

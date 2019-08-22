@@ -1,0 +1,604 @@
+extends pug/layout-full.pug
+
+block variables
+  - var pageClass = "main-full";
+
+block short
+  .page-short.main
+    .cropped-image.main__image
+      .cropped-image__wrapper.main__image-wrapper
+        img( src="img/bg-main@1x.png" srcset="img/bg-main@2x.png 2x" width="922" height="800" alt="Девушка и юноша" )
+      +svg("shape-1", 1260, 700)
+
+    .page-short__content.page-short__content--bottom
+      p.page-short__title.main__title Пр#[em a]здн#[em и]к для т#[em е]х, к#[em т]о сво#[em и]ми руками д#[em е]лае#[em т] будущее
+      a.btn-oval.btn-oval--main.btn-oval--other.main__link.main__link--bottom( href="#" ) Представить проект
+      a.btn-oval.btn-oval--main.main__link( href="#" ) Посетить фестиваль
+
+    a.nav-button.nav-button--bottom( href="#more" ) Подробнее
+    a.nav-button.nav-button--top( href="about.html" ) Кратко о нас
+    a.nav-button.nav-button--left( href="programm.html" ) Обмен практиками
+    a.nav-button.nav-button--right( href="region.html" ) Фестивали в регионах
+
+block full
+  section.main-full__container
+    .cropped-image.main-full__image
+      .cropped-image__wrapper.main-full__image-wrapper
+        picture
+          source(media="(min-width: 768px)" srcset="img/main-full-bg@1x.png 1x, img/main-full-bg@2x.png 2x")
+          img( src="img/main-full-bg-mobile@1x.png" srcset="img/main-full-bg-mobile@2x.png 2x" width="793" height="621" alt="Фестиваль" )
+      +svg("shape-2", 983, 869)
+      +svg("shape-2-mobile", 480, 470)
+    .container
+      p.main-full__date 31 августа—1 сентября
+        span Москва, ВДНХ
+      .main-full__block
+        h1.main-full__title Rukami — фестиваль идей и&nbsp;технологий
+        a.main-full__link-info.btn-oval(href="#info") Что там будет?
+        .link-download
+          a(href="#" download) Скачать расписание
+          span 1 MB
+        .link-download
+          a(href="#" download) Карта фестиваля
+          span 1 MB
+
+  section.partners.partners--general.partners--show(data-btn-select="0")
+    .container
+      h2.partners__title Генеральные партнёры
+      .partners__arrows
+        button.partners__button.swiper-button-prev(type="button" aria-label="Кнопка предыдущий слайд")
+          +svg("arrow-right", 25, 16)
+        button.partners__button.swiper-button-next(type="button" aria-label="Кнопка следующий слайд")
+          +svg("arrow-right", 25, 16)
+      .swiper-container
+        ul.partners__list.swiper-wrapper
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner2.png" width="170" height="96" alt="Яндекс")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner3.png" width="293" height="63" alt="PlayStation")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner1.png" width="140" height="48" alt="Google")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner2.png" width="170" height="96" alt="Яндекс")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner3.png" width="293" height="63" alt="PlayStation")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner1.png" width="140" height="48" alt="Google")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+  section.go-section
+    .container
+      h2.go-section__title Тема фестиваля
+      p.go-section__text Цифровая эволю&shy;ция развернулась во&nbsp;всех&nbsp;сферах жизни: от общения и&nbsp;развлечений до образования и <br>бизнес&#8209;процессов. Эти перемены бросают технологи&shy;ческий вызов обществу и дарят сверхвозможности тем, кто готов этот вызов принять!
+      a.go-section__btn.btn-oval(href="#") Я иду
+  section.partners.partners--gen-info(data-btn-select="1")
+    .container
+      h2.partners__title Генеральные информационные партнёры
+      .partners__arrows
+        button.partners__button.swiper-button-prev(type="button" aria-label="Кнопка предыдущий слайд")
+          +svg("arrow-right", 25, 16)
+        button.partners__button.swiper-button-next(type="button" aria-label="Кнопка следующий слайд")
+          +svg("arrow-right", 25, 16)
+      .swiper-container
+        ul.partners__list.swiper-wrapper
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner5.png" width="107" height="107" alt="Lays")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner6.png" width="84" height="73" alt="Splat")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner7.png" width="180" height="180" alt="Snickers")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner5.png" width="107" height="107" alt="Lays")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner6.png" width="84" height="73" alt="Splat")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner7.png" width="180" height="180" alt="Snickers")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+  section.main-about
+    .cropped-image.main-about__image
+      .cropped-image__wrapper.main-about__image-wrapper
+        img( src="img/main-about-bg@1x.jpg" srcset="img/main-about-bg@2x.jpg 2x" width="1065" height="827" alt="Девочка" )
+      +svg("shape-6", 715, 392)
+    .cropped-image.main-about__image.main-about__image--mobile
+      .cropped-image__wrapper.main-about__image-wrapper
+        img( src="img/bg-main@1x.png" srcset="img/bg-main@2x.png 2x" width="922" height="800" alt="Девушка и юноша" )
+      +svg("shape-6-mobile", 1260, 700)
+    .container
+      h2.main-about__title Наш фестиваль называется Rukami, потому что на нём нет места простым зрителям
+      p.main-about__descr Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+      p.main-about__descr Вместе мы будем создавать невероятные устройства, инсталляции и перфомансы — прямо на фестивале, своими руками!
+  section.tracks.tracks--pink
+    .container
+      h2.tracks__title Треки
+      .tracks__switch__btns
+        button.tracks__tab.tracks__tab--mobile.tracks__tab--man(type="button" data-tab="1") Человек
+        .tracks__list
+          button.tracks__tab.tracks__tab--man.tracks__tab--active(type="button" data-tab="1") Человек
+          button.tracks__tab.tracks__tab--env(type="button" data-tab="2") Среда обитания
+          button.tracks__tab.tracks__tab--space(type="button" data-tab="3") Космос
+          button.tracks__tab.tracks__tab--fun(type="button" data-tab="4") Fun
+      .tracks__tab-block.tracks__tab-block--opened(data-tab="1")
+        p Нейроинтерфейсы, кибер-люди, цифровой портрет ДНК, био-хакинг: трек посвящен изобретениям, которые повышают функциональность, прокачивают наше тело и сознание, до уровня супер-героев!
+      .tracks__tab-block(data-tab="2")
+        p Текст второго блока
+      .tracks__tab-block(data-tab="3")
+        p Текст третьего блока
+      .tracks__tab-block(data-tab="4")
+        p Текст четвертого блока
+    .tracks__container
+      a.tracks__block.tracks__block--big(href="popup.html" data-popup)
+        .cropped-image.tracks__image
+          .cropped-image__wrapper.tracks__image-wrapper
+            img( src="img/main-info1@1x.jpg" srcset="img/main-info1@1x.jpg 2x" width="924" height="949" alt="Парень в VR очках" )
+          +svg("shape-4", 924, 705)
+        p.tracks__tag.tracks__tag--wow Wow
+        h3.tracks__text.tracks__text--big Название активности или объекта
+      a.tracks__block(href="popup2.html" data-popup)
+        p.tracks__tag Лекция
+        h3.tracks__text Название активности или объекта
+      a.tracks__block(href="popup.html"  data-popup)
+        p.tracks__tag Лекция
+        h3.tracks__text Название активности или объекта
+      a.tracks__block(href="popup2.html"  data-popup)
+        p.tracks__tag Мастер-класс
+        h3.tracks__text Название активности или объекта
+      a.tracks__block.tracks__block--long(href="popup.html" data-popup)
+        .cropped-image.tracks__image
+          .cropped-image__wrapper.tracks__image-wrapper
+            img(src="img/main-info5-1@1x.jpg" srcset="img/main-info5-1@2x.jpg 2x" width="490" height="556" alt="Компьютеры" )
+          +svg("shape-5", 516, 707)
+          +svg("shape-5-mobile", 375, 375)
+        p.tracks__tag.tracks__tag--wow Wow
+        h3.tracks__text Название активности или объекта
+    button.tracks__btn(type="button") Показать ещё
+  section.partners.partners--info(data-btn-select="2")
+    .container
+      h2.partners__title Информационные партнёры
+      .partners__arrows
+        button.partners__button.swiper-button-prev(type="button" aria-label="Кнопка предыдущий слайд")
+          +svg("arrow-right", 25, 16)
+        button.partners__button.swiper-button-next(type="button" aria-label="Кнопка следующий слайд")
+          +svg("arrow-right", 25, 16)
+      .swiper-container
+        ul.partners__list.swiper-wrapper
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner4.png" width="368" height="216" alt="Манн, Иванов и Фербер")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner3.png" width="293" height="63" alt="PlayStation")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner2.png" width="170" height="96" alt="Яндекс")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner4.png" width="368" height="216" alt="Манн, Иванов и Фербер")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner3.png" width="293" height="63" alt="PlayStation")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner2.png" width="170" height="96" alt="Яндекс")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+  section.headliners
+    .container
+      h2.headliners__title Хедлайнеры
+      .headliners__slider
+        button.headliners__button.headliners__button--prev(type="button" aria-label="Кнопка предыдущий слайд")
+          +svg("arrow-right", 25, 16)
+        .swiper-container
+          ul.headliners__list.swiper-wrapper
+            li.headliners__item.swiper-slide
+              picture
+                source(media="(min-width: 768px)" srcset="img/headliner2@1x.jpg 1x, img/headliner2@2x.jpg 2x")
+                img(src="img/headliner2-mobile@1x.jpg" srcset="img/headliner2-mobile@2x.jpg 2x" alt="Билл Симонс")
+              p.headliners__name Билл&nbsp;Симонс
+              p.headliners__descr Главный инженер Boston Dynamic
+            li.headliners__item.swiper-slide
+              img(src="img/headliner3@1x.jpg" srcset="img/headliner3@2x.jpg 2x" alt="Данила Крастер")
+              p.headliners__name Данила Крастер
+              p.headliners__descr Звёзды You-Tube с лучшими хитами вживую!
+            li.headliners__item.swiper-slide
+              img(src="img/headliner1@1x.jpg" srcset="img/headliner1@1x.jpg 2x" alt="Compressorheads")
+              p.headliners__name Comressor&shy;heads
+              p.headliners__descr Звёзды You-Tube с лучшими хитами вживую!
+            li.headliners__item.swiper-slide
+              picture
+                source(media="(min-width: 768px)" srcset="img/headliner2@1x.jpg 1x, img/headliner2@2x.jpg 2x")
+                img(src="img/headliner2-mobile@1x.jpg" srcset="img/headliner2-mobile@2x.jpg 2x" alt="Билл Симонс")
+              p.headliners__name Билл&nbsp;Симонс
+              p.headliners__descr Главный инженер Boston Dynamic
+            li.headliners__item.swiper-slide
+              img(src="img/headliner3@1x.jpg" srcset="img/headliner3@2x.jpg 2x" alt="Данила Крастер")
+              p.headliners__name Данила Крастер
+              p.headliners__descr Звёзды You-Tube с лучшими хитами вживую!
+            li.headliners__item.swiper-slide
+              img(src="img/headliner1@1x.jpg" srcset="img/headliner1@1x.jpg 2x" alt="Compressorheads")
+              p.headliners__name Comressor&shy;heads
+              p.headliners__descr Звёзды You-Tube с лучшими хитами вживую!
+
+        button.headliners__button.headliners__button--next(type="button" aria-label="Кнопка следующий слайд")
+          +svg("arrow-right", 25, 16)
+  section.program
+    .container
+      h2.program__title Программа
+      .program__tabs
+        button.program__date.program__date--active(type="button" data-program-tab="1") 31 августа
+        button.program__date(type="button" data-program-tab="2") 1 сентября
+      .program__table(data-program-tab="1")
+        div
+          button.program__button-mobile.program__text.program__text--head(type="button" data-col="2" data-program-tab="1") Главная сцена
+          .program__hidden-block
+            .program__col.program__col--time
+              img(src="img/clock.svg" alt="Часы")
+            .program__col.program__col--scene(data-col="2")
+              button.program__text.program__text--head(type="button" data-col="2" data-program-tab="1") Главная сцена
+            .program__col.program__col--first-lect(data-col="3")
+              button.program__text.program__text--head(type="button" data-col="3" data-program-tab="1") I лекторий
+            .program__col.program__col--second-lect(data-col="4")
+              button.program__text.program__text--head(type="button" data-col="4" data-program-tab="1") II лекторий
+            .program__col.program__col--first-playground(data-col="5")
+              button.program__text.program__text--head(type="button" data-col="5" data-program-tab="1") I площадка
+            .program__col.program__col--second-playground(data-col="6")
+              button.program__text.program__text--head(type="button" data-col="6" data-program-tab="1") II площадка
+        div
+          .program__col.program__col--time
+            p.program__text.program__text--big 11:00
+          .program__col.program__col--scene(data-col="2")
+            span.program__time 11:00
+            p.program__text.program__text--big Начало работы интерактивных площадок и детской зоны
+          .program__col.program__col--first-playground(data-col="5")
+            span.program__time 11:00
+            p.program__text.program__text--small Выступление профессора Селезнёва с названием темы на четыре строки
+          .program__col.program__col--second-playground(data-col="6")
+            span.program__time 11:00
+            p.program__text.program__text--small Выступление профессора Селезнёва с названием темы на четыре строки
+        div
+          .program__col.program__col--time
+            p.program__text.program__text--big 13:00
+          .program__col.program__col--scene(data-col="2")
+            span.program__time 13:00
+            p.program__text.program__text--big Открытие фестиваля
+        div
+          .program__col.program__col--time
+            p.program__text.program__text--big 14:00
+          .program__col.program__col--scene(data-col="2")
+            span.program__time 14:00
+            p.program__text.program__text--big Имя спикера
+            p.program__text.program__text--small Выступление профессора Селезнёва с названием темы на четыре строки
+          .program__col.program__col--first-lect(data-col="3")
+            span.program__time 14:00
+            p.program__text.program__text--big Имя спикера
+            p.program__text.program__text--small Выступление профессора Селезнёва с названием темы на четыре строки
+            span.tag.tag--pink Человек
+            .program__info
+              .program__popap
+                div
+                  img(src="img/icon-partner4.png" width="200" height="117" alt="Манн, Иванов и Фербер")
+                div
+                  img(src="img/icon-partner3.png" width="149" height="32" alt="PlayStation")
+                div
+                  img(src="img/icon-partner2.png" width="90" height="51" alt="Яндекс")
+                div
+                  img(src="img/icon-partner5.png" width="61" height="61" alt="Lays")
+              button.tag.tag--info(type="button" aria-label="Кнопка Информации")
+                +svg("tag-info", 24, 24)
+                +svg("tag-info-black", 24, 24)
+          .program__col.program__col--second-lect(data-col="4")
+            span.program__time 14:00
+            p.program__text.program__text--small Выступление профессора Селезнёва с названием темы на четыре строки
+            span.tag.tag--purple Космос
+            .program__info
+              .program__popap
+                div
+                  img(src="img/icon-partner4.png" width="200" height="117" alt="Манн, Иванов и Фербер")
+                div
+                  img(src="img/icon-partner3.png" width="149" height="32" alt="PlayStation")
+                div
+                  img(src="img/icon-partner2.png" width="90" height="51" alt="Яндекс")
+                div
+                  img(src="img/icon-partner5.png" width="61" height="61" alt="Lays")
+              button.tag.tag--info(type="button" aria-label="Кнопка Информации")
+                +svg("tag-info", 24, 24)
+                +svg("tag-info-black", 24, 24)
+          .program__col.program__col--first-playground(data-col="5")
+            span.program__time 14:00
+            p.program__text.program__text--small Выступление профессора Селезнёва с названием темы на четыре строки
+          .program__col.program__col--second-playground(data-col="6")
+            span.program__time 14:00
+            p.program__text.program__text--small Ещё какое-нибудь мероприятие с довольно длинным названием и довольно длинным именем спикера
+        div
+          .program__col.program__col--time
+            p.program__text.program__text--big 16:00
+          .program__col.program__col--scene(data-col="2")
+            span.program__time 16:00
+            p.program__text.program__text--big Билл Симонс
+            p.program__text.program__text--small Ещё какое-нибудь мероприятие с довольно длинным названием и довольно длинным именем спикера
+            .program__info
+              .program__popap
+                div
+                  img(src="img/icon-partner4.png" width="200" height="117" alt="Манн, Иванов и Фербер")
+                div
+                  img(src="img/icon-partner3.png" width="149" height="32" alt="PlayStation")
+                div
+                  img(src="img/icon-partner2.png" width="90" height="51" alt="Яндекс")
+                div
+                  img(src="img/icon-partner5.png" width="61" height="61" alt="Lays")
+              button.tag.tag--info(type="button" aria-label="Кнопка Информации")
+                +svg("tag-info", 24, 24)
+                +svg("tag-info-black", 24, 24)
+          .program__col.program__col--first-lect(data-col="3")
+            span.program__time 16:00
+            p.program__text.program__text--small Ещё какое-нибудь мероприятие с довольно длинным названием и довольно длинным именем спикера
+            span.tag.tag--yellow Среда обитания
+            .program__info
+              .program__popap
+                div
+                  img(src="img/icon-partner4.png" width="200" height="117" alt="Манн, Иванов и Фербер")
+                div
+                  img(src="img/icon-partner3.png" width="149" height="32" alt="PlayStation")
+                div
+                  img(src="img/icon-partner2.png" width="90" height="51" alt="Яндекс")
+                div
+                  img(src="img/icon-partner5.png" width="61" height="61" alt="Lays")
+              button.tag.tag--info(type="button" aria-label="Кнопка Информации")
+                +svg("tag-info", 24, 24)
+                +svg("tag-info-black", 24, 24)
+          .program__col.program__col--second-lect(data-col="4")
+            span.program__time 16:00
+            p.program__text.program__text--big Имя спикера
+            p.program__text.program__text--small Ещё какое-нибудь мероприятие с довольно длинным названием и довольно длинным именем спикера
+            span.tag.tag--blue Fun
+          .program__col.program__col--first-playground(data-col="5")
+            span.program__time 16:00
+            p.program__text.program__text--small Выступление профессора Селезнёва с названием темы на четыре строки
+          .program__col.program__col--second-playground(data-col="6")
+            span.program__time 16:00
+            p.program__text.program__text--small Ещё какое-нибудь мероприятие с довольно длинным названием и довольно длинным именем спикера
+        div
+          .program__col.program__col--button
+            button.program__more.btn-oval Посмотреть всю программу
+        div.visually-hidden
+          .program__col.program__col--time
+          .program__col.program__col--scene
+        div
+          .program__col.program__col--time
+            p.program__text.program__text--big 21:00
+          .program__col.program__col--scene(data-col="2")
+            span.program__time 21:00
+            p.program__text.program__text--big Comressorheads
+            p.program__text.program__text--big Вечерний концерт и инженерное шоу.
+            p.program__text.program__text--big Продолжается работа интерактивных площадок
+
+      .program__table.closed(data-program-tab="2")
+        div
+          button.program__button-mobile.program__text.program__text--head(type="button" data-col="2" data-program-tab="2") Главная сцена
+          .program__hidden-block
+            .program__col.program__col--time
+              img(src="img/clock.svg" alt="Часы")
+            .program__col.program__col--scene(data-col="2")
+              button.program__text.program__text--head(type="button" data-col="2" data-program-tab="2") Главная сцена
+            .program__col.program__col--first-lect(data-col="3")
+              button.program__text.program__text--head(type="button" data-col="3" data-program-tab="2") I лекторий
+            .program__col.program__col--second-lect(data-col="4")
+              button.program__text.program__text--head(type="button" data-col="4" data-program-tab="2") II лекторий
+            .program__col.program__col--first-playground(data-col="5")
+              button.program__text.program__text--head(type="button" data-col="5" data-program-tab="2") I площадка
+            .program__col.program__col--second-playground(data-col="6")
+              button.program__text.program__text--head(type="button" data-col="6" data-program-tab="2") II площадка
+        div
+          .program__col.program__col--time
+            p.program__text.program__text--big 11:00
+          .program__col.program__col--scene(data-col="2")
+            span.program__time 11:00
+            p.program__text.program__text--big Начало работы интерактивных площадок и детской зоны
+          .program__col.program__col--first-playground(data-col="5")
+            span.program__time 11:00
+            p.program__text.program__text--small Выступление профессора Селезнёва с названием темы на четыре строки
+          .program__col.program__col--second-playground(data-col="6")
+            span.program__time 11:00
+            p.program__text.program__text--small Выступление профессора Селезнёва с названием темы на четыре строки
+        div
+          .program__col.program__col--time
+            p.program__text.program__text--big 21:00
+          .program__col.program__col--scene(data-col="2")
+            span.program__time 21:00
+            p.program__text.program__text--big Comressorheads
+            p.program__text.program__text--big Вечерний концерт и инженерное шоу.
+            p.program__text.program__text--big Продолжается работа интерактивных площадок
+
+      .program__add
+        p В расписании возможны изменения. Уточняйте актуальное расписание на&nbsp;входе.
+        p На входе могут быть очереди. Советуем приходить за полчаса до начала события
+        .link-download.link-download
+          a(href="#" download) Скачать расписание
+          span 1 MB
+
+  section.partners.partners--theme(data-btn-select="3")
+    .container
+      h2.partners__title Тематические партнёры
+      .partners__arrows
+        button.partners__button.swiper-button-prev(type="button" aria-label="Кнопка предыдущий слайд")
+          +svg("arrow-right", 25, 16)
+        button.partners__button.swiper-button-next(type="button" aria-label="Кнопка следующий слайд")
+          +svg("arrow-right", 25, 16)
+      .swiper-container
+        ul.partners__list.swiper-wrapper
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner5.png" width="107" height="107" alt="Lays")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner6.png" width="84" height="73" alt="Splat")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner7.png" width="180" height="180" alt="Snickers")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner5.png" width="107" height="107" alt="Lays")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner6.png" width="84" height="73" alt="Splat")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+          li.partners__item.swiper-slide
+            .partners__img
+              img(src="img/icon-partner7.png" width="180" height="180" alt="Snickers")
+            p.partners__descr Найдётся всё!
+            p.partners__text Каждый станет участником большого движения технологических энтузиастов и изобретателей.
+  section.contacts.main-contacts
+    .container
+      .contacts__block
+        h2.contacts__title Ждём вас
+        p.contacts__ref Для справок
+        a(href="tel:+7(931)1234567") +7 (931) 123 45 67
+        a.contacts__email(href="mailto:rukamifest@gmail.com") rukamifest@gmail.com
+        .link-download.link-download
+          a(href="#" download) Карта фестиваля
+          span 1 MB
+      .contacts__table
+        div
+          .contacts__col
+            p Участие в программе фестиваля
+          .contacts__col
+            p.contacts__name Антон Шарыпов
+            a.contacts__email(href="mailto:Sharypov.AV@ntifund.rvc.ru") Sharypov.AV@ntifund.rvc.ru
+        div
+          .contacts__col
+            p Партнёрство
+          .contacts__col
+            p.contacts__name Елена Субботина
+            a(href="tel:+7(919)7707289").contacts__tel +7 (919) 770 72 89
+            a.contacts__email(href="mailto:subbotina.El@ntifund.rvc.ru") subbotina.El@ntifund.rvc.ru
+        div
+          .contacts__col
+            p По вопросам СМИ
+          .contacts__col
+            a(href="tel:+7(926)6005475").contacts__tel +7 (926) 600 54 75
+            a.contacts__email(href="mailto:rovinskaya.mm@ntifund.rvc.ru") rovinskaya.mm@ntifund.rvc.ru
+  section.share
+    h2.share__title Прикоснитесь к&nbsp;будущему своими руками!
+    .cropped-image.share__image
+      picture
+        source(media="(min-width: 768px)" srcset="img/share-bg@1x.png 1x, img/share-bg@1x.png 2x")
+        img( src="img/share-bg-mobile@1x.png" srcset="img/share-bg-mobile@1x.png 2x" alt="Девушка со скейтом" )
+    .container
+      .share__block.social
+        p.share__text И не забудьте поделиться с&nbsp;друзьями
+        ul.share__list.social__list
+          li
+            button( type="button" title="Фейсбук" aria-label="Фейсбук" data-sharer="facebook" data-url="#" )
+              +svg("fb", 16, 16)
+          li
+            button( type="button" title="ВКонтакте" aria-label="ВКонтакте" data-sharer="vk" data-url="#" )
+              +svg("vk", 16, 16)
+          li
+            button( type="button" title="Твиттер" aria-label="Твиттер" data-sharer="twitter" data-url="#" )
+              +svg("twitter", 16, 16)
+  section.faq
+    .container
+      h2.faq__title FAQ
+      .faq__acc
+        .faq__col
+          .faq__block.faq__block--opened(data-faq="1")
+            h3.faq__question(data-faq="1") Можно ли брать с собой напитки и еду на фестиваль ?
+              span
+                +svg("plus", 19, 19)
+                +svg("minus", 19, 19)
+            p.faq__answer Требования службы безопасности запрещают пронос пищевых продуктов и жидкостей на фестиваль. На территории будет работать фудкорт, в котором будут действовать средние рыночные цены.
+          .faq__block(data-faq="2")
+            h3.faq__question(data-faq="2") Где можно оставить маленького ребёнка?
+              span
+                +svg("plus", 19, 19)
+                +svg("minus", 19, 19)
+            p.faq__answer Требования службы безопасности запрещают пронос пищевых продуктов и жидкостей на фестиваль. На территории будет работать фудкорт, в котором будут действовать средние рыночные цены.
+          .faq__block(data-faq="3")
+            h3.faq__question(data-faq="3") Вход в день фестиваля платный?
+              span
+                +svg("plus", 19, 19)
+                +svg("minus", 19, 19)
+            p.faq__answer Требования службы безопасности запрещают пронос пищевых продуктов и жидкостей на фестиваль. На территории будет работать фудкорт, в котором будут действовать средние рыночные цены.
+        .faq__col
+          .faq__block(data-faq="4")
+            h3.faq__question(data-faq="4") Как дела с парковкой?
+              span
+                +svg("plus", 19, 19)
+                +svg("minus", 19, 19)
+            p.faq__answer Требования службы безопасности запрещают пронос пищевых продуктов и жидкостей на фестиваль. На территории будет работать фудкорт, в котором будут действовать средние рыночные цены.
+          .faq__block(data-faq="5")
+            h3.faq__question(data-faq="5") Где можно оставить маленького ребёнка?
+              span
+                +svg("plus", 19, 19)
+                +svg("minus", 19, 19)
+            p.faq__answer Требования службы безопасности запрещают пронос пищевых продуктов и жидкостей на фестиваль. На территории будет работать фудкорт, в котором будут действовать средние рыночные цены.
+          .faq__block(data-faq="6")
+            h3.faq__question(data-faq="6") Как дела с парковкой?
+              span
+                +svg("plus", 19, 19)
+                +svg("minus", 19, 19)
+            p.faq__answer Требования службы безопасности запрещают пронос пищевых продуктов и жидкостей на фестиваль. На территории будет работать фудкорт, в котором будут действовать средние рыночные цены.
+
+  .switch-btns
+    button.switch-btns__btn-select(type="button" data-btn-select="0") Генеральные партнёры
+    .switch-btns__hidden-block
+      button.switch-btns__btn-select(type="button" data-btn-select="1") Генеральные информационные партнёры
+      button.switch-btns__btn-select(type="button" data-btn-select="2") Информационные партнёры
+      button.switch-btns__btn-select(type="button" data-btn-select="3") Тематические партнёры
+
+block popup
+  .popup-container.closed
+    .popup-container__background
+    button.popup-container__close(type="button" aria-label="Закрыть попап")
+      +svg("icon-close", 47, 33)

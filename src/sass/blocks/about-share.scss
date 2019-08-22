@@ -1,0 +1,52 @@
+.about-share {
+  padding-top: size(110px);
+  padding-bottom: 185px;
+  min-height: auto;
+  height: auto;
+  position: relative;
+  background-color: $vivid-tangerine;
+  background-image: none;
+
+  @include mobile {
+    display: none;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: size(-30px);
+    left: size(45px);
+    width: size(750px);
+    height: size(390px);
+
+    background-image: url("../img/share-white-blur.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: auto;
+  }
+}
+
+.about-share__social {
+  display: inline-block;
+  margin-left: size(10px);
+  vertical-align: bottom;
+}
+
+.about-share__block {
+  width: 100%;
+  max-width: size(615px);
+  padding-top: 0;
+  margin: 0 auto;
+  float: none;
+}
+
+.about-share__text {
+  position: relative;
+  text-align: left;
+}
+
+.about-share__list {
+  position: static;
+  display: flex;
+  @include list-reset;
+}

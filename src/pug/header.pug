@@ -1,0 +1,47 @@
+header.header
+  .header__logo
+    a( href="main.html" aria-label="Руками" )
+      +svg("logo-rukami", 152, 32)
+  .header__links
+    a( href="#" ) Представить проект
+    a( href="#" ) Посетить фестиваль
+
+nav.main-nav
+  button.main-nav__btn( type="button" aria-label="Меню" )
+    +svg-menu
+  .main-nav__inner
+    p.main-nav__info Уровни сайта можно менять с&nbsp;помощью #[span.main-nav__arrows( aria-label="стрелок"): +svg("arrows", 29, 30)] на клавиатуре или&nbsp;кликом мыши, когда видны маркеры перехода
+    ul.main-nav__list
+      li.main-nav__item.main-nav__item--top
+        a.main-nav__link( href="about.html" )
+          span О проекте
+          .main-nav__circle
+        .main-nav__line
+      li.main-nav__item.main-nav__item--left
+        a.main-nav__link( href="programm.html" )
+          span Обмен практиками
+          .main-nav__circle
+      li.main-nav__item.main-nav__item--center
+        a.main-nav__link( href="main.html" )
+          .main-nav__circle
+          span Фестиваль Rukami
+        .main-nav__line
+      li.main-nav__item.main-nav__item--right
+        a.main-nav__link( href="region.html" )
+          .main-nav__circle
+          span Фестивали в&nbsp;регионах
+    .main-nav__buttons
+      a.btn-oval.btn-oval--main.btn-oval--other( href="#" ) Представить проект
+      a.btn-oval.btn-oval--main( href="#" ) Посетить фестиваль
+    a.main-nav__contacts.btn-oval.btn-oval--other( href="contacts.html" ) Контакты
+    .main-nav__social.social
+      ul.social__list
+        li
+          a(href="#" target="_blank" title="ВКонтакте" aria-label="ВКонтакте")
+            +svg("vk", 16, 16)
+        li
+          a(href="#" target="_blank" title="Фейсбук" aria-label="Фейсбук")
+            +svg("fb", 16, 16)
+        li
+          a(href="#" target="_blank" title="Инстаграм" aria-label="Инстаграм")
+            +svg("insta", 16, 16)

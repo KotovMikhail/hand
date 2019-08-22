@@ -1,0 +1,113 @@
+.about-full {
+  background-color: $light-wisteria;
+}
+
+.about-full__intro {
+  background-color: $light-wisteria;
+  background-image: url('../img/about-bg-full.svg');
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: auto size(655px);
+  padding-bottom: size(216px);
+
+  @include mobile {
+    background-image: none;
+    padding-bottom: 92px;
+  }
+}
+
+.about-full__intro p {
+  width: 100%;
+  max-width: size(588px);
+  margin: 0 auto;
+  @include font-small();
+
+  @include mobile {
+    text-align: center;
+    @include font-xs();
+  }
+
+  &:first-child {
+    max-width: size(1095px);
+    margin: 0;
+    margin-bottom: size(50px);
+    padding-top: size(200px);
+    @include font-xxl();
+
+    @include tablet {
+      @include font-large();
+    }
+
+    @include mobile {
+      padding-top: 72px;
+      margin-bottom: 35px;
+      @include font-medium();
+    }
+  }
+}
+
+.about-full__image {
+  top: size(222px);
+  right: -20vw;
+  width: calc(1030 / 1440 * 100%); // 1030 = 515 (ширина свг) * 2
+  height: 0;
+  padding-top: calc(632 / 1440 * 100%); // 632 = 316 (высота свг) * 2
+
+  @include desktop-only {
+    right: size(-208px);
+  }
+
+  @include tablet {
+    top: 80px;
+    width: (515 * 1.5 / 1200 * 100%);
+    padding-top: (316 * 1.5 / 1200 * 100%);
+  }
+
+  @include mobile {
+    // 520px желаемая ширина свг на разрешении 375px;
+    // 515px натуральная ширина свг
+    // 316px натуральная высота свг
+    // 375px - ширина макета
+
+    position: relative;
+    top: 0;
+    left: calc(50% + 13px);
+    right: auto;
+
+    width: (520 / 375 * 100vw);
+    padding-top: (520 * 316 / 515 / 375 * 100vw);
+    margin-top: 0;
+    transform: translateX(-50%);
+  }
+
+  svg {
+    fill: $goldenrod;
+
+    @include mobile {
+      fill: $light-wisteria;
+    }
+  }
+}
+
+.about-full__image-wrapper {
+  background-color: $light-wisteria;
+}
+
+.about-full__image img {
+  //размеры и расположение фотки внутри маски
+  //top: calc(100% - #{size(30px)});
+  position: absolute;
+  top: -2.8vw;
+  width: 103%;
+  height: auto;
+
+  @include desktop-only {
+    top: size(-42px);
+  }
+
+  @include mobile {
+    top: -6.66vw;
+    width: 105%;
+    // transform: translateX(-40%);
+  }
+}

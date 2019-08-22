@@ -1,0 +1,63 @@
+extends pug/layout-full.pug
+
+block variables
+  - var title = "About";
+  - var pageClass = "about-full";
+
+block short
+  .page-short.about-short
+    .about-short__content
+      h1 Rukami — общ#[em е]с#[em т]во мэ#[em й]ке#[em р]ов
+      .about-short__descr
+        p Участники проекта — творцы, #[br] технологические энтузиасты, изобретатели и просто мечтатели. Герои нашего времени, которые своими руками создают совершенное и технологичное будущее.
+        .about-short__example-wrapper
+          p Например
+          .about-short__example
+            +svg("copy-printer", 65, 79)
+            span Напечатать 3D-принтер на 3D-принтере
+            +svg("refresh-icon", 56, 46)
+
+    a.nav-button.nav-button--right( href="#more" ) Подробнее
+    a.nav-button.nav-button--bottom( href="main.html" ) Главная
+
+block full
+  .about-full__intro
+    .container
+      p Rukami — про#[em е]кт, за которым стоят люди с нестандартным взглядом на&nbsp;привычные вещи
+      p Это люди, которые своими исключительными способностями, знаниями и стремлениями способны изменить завтрашний мир.
+
+  section.project
+    .cropped-image.about-full__image
+      .cropped-image__wrapper.about-full__image-wrapper
+        img( src="img/about-bg@1x.jpg" srcset="img/about-bg@2x.jpg 2x" width="832" height="787" alt="Девушка и юноша" )
+      +svg("shape-3", 515, 315)
+
+    .container
+      h2 Мы создаем среду, которая вдохновляет, бросает вызов<br> и мотивирует<br> к созданию неординарных инженерных решений
+      h3 Проект поддерживают
+
+      ul.project__list
+        li
+          h4 Национальная Технологическая Инициатива (НТИ)
+          p Государственная программа мер по поддержке развития в России перспективных отраслей, которые в течение следующих 20 лет могут стать основой мировой экономики.
+          a nti2035.ru
+
+        li
+          h4 Кружковое движение НТИ
+          p Сообщество энтузиастов, желающих создавать новые компетенции, исходя из практических нужд технологических рынков.
+          a nti2035.ru/talents/circles
+
+  section.share.about-share
+      h2.share__title.visually-hidden Поделитесь с друзьями
+
+      .share__block.about-share__block
+        .share__text.about-share__text Это может быть интересно вашим друзьям, расскажите им
+
+          .social.about-share__social
+            ul.social__list.about-share__list
+              li: button( type="button" title="Фейсбук" aria-label="Фейсбук" data-sharer="facebook" data-url="#" )
+                +svg("fb", 16, 16)
+              li: button( type="button" title="ВКонтакте" aria-label="ВКонтакте" data-sharer="vk" data-url="#" )
+                +svg("vk", 16, 16)
+              li: button( type="button" title="Твиттер" aria-label="Твиттер" data-sharer="twitter" data-url="#" )
+                +svg("twitter", 16, 16)

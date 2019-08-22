@@ -1,0 +1,143 @@
+.event-join {
+  padding-top: size(88px);
+  padding-bottom: 127px;
+  background-color: $goldenrod;
+
+  @include mobile {
+    padding-top: 60px;
+    padding-bottom: 90px;
+  }
+}
+
+.event-join h2 {
+  margin: 0;
+  margin-right: size(47px);
+  margin-bottom: size(20px);
+  @include font-xxl();
+
+  @include tablet {
+    margin-right: 0;
+    text-align: center;
+    order: 0;
+  }
+
+  @include mobile {
+    width: 100%;
+
+    margin-right: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    @include font-medium();
+  }
+}
+
+.event-join__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: size(22px);
+
+  @include tablet {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 73px;
+
+  }
+
+  & a {
+    position: relative;
+    padding: size(21px);
+
+    @include tablet {
+      order: 2;
+    }
+  }
+}
+
+.event-join p {
+  margin: 0;
+  margin-bottom: size(20px);
+  max-width: size(578px);
+  @include font-small();
+
+  @include tablet {
+    order: 1;
+    text-align: center;
+  }
+
+  @include mobile {
+    padding: 0 1px;
+    @include font-xs();
+  }
+}
+
+.event-join__list {
+  max-width: size(815px);
+  @include list-reset();
+  display: flex;
+  flex-wrap: wrap;
+
+  @include tablet {
+    max-width: 100%;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.event-join__list li {
+  width: 50%;
+
+  @include tablet {
+    text-align: center;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  & a {
+    @include link-reset;
+    color: $black;
+    text-decoration: underline;
+    transition: opacity 0.3s;
+
+    &:hover, &:focus {
+      opacity: 0.6;
+    }
+  }
+}
+
+.event-join__list p {
+  text-align: left;
+  margin-bottom: size(15px);
+
+  @include tablet {
+    text-align: center;
+  }
+
+  @include mobile {
+    margin-bottom: 6px;
+    @include font-small();
+    text-align: center;
+  }
+}
+
+.event-join__list div {
+  @include mobile {
+    text-align: center;
+  }
+}

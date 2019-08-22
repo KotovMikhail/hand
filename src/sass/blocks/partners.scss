@@ -1,0 +1,385 @@
+.partners {
+  position: relative;
+  box-sizing: border-box;
+  z-index: 5;
+  background: $white;
+
+  &--general {
+    padding-bottom: 135px;
+
+    .partners__title {
+      padding-top: 92px;
+      margin-bottom: 37px;
+    }
+
+    .partners__arrows {
+      top: 92px;
+    }
+  }
+
+  &--gen-info {
+    padding-bottom: 127px;
+
+    .partners__title {
+      padding-top: 80px;
+      margin-bottom: 3px;
+    }
+
+    .partners__arrows {
+      top: 80px;
+    }
+  }
+
+  &--info {
+    padding-bottom: 160px;
+
+    .partners__title {
+      padding-top: 92px;
+    }
+
+    .partners__arrows {
+      top: 92px;
+    }
+  }
+
+  &--theme {
+    padding-bottom: 115px;
+
+    .partners__title {
+      padding-top: 65px;
+      margin-bottom: size-vh(3px, $height-desktop);
+    }
+
+    .partners__arrows {
+      top: 65px;
+    }
+  }
+
+  @include mobile {
+    padding-top: 0;
+    display: none;
+
+    &--general,
+    &--gen-info,
+    &--info,
+    &--theme {
+      order: 1;
+      min-height: auto;
+      padding-bottom: 0;
+
+      .partners__title  {
+        padding-top: 48px;
+        margin: 0 auto;
+        text-align: center;
+        width: 85%;
+      }
+
+      .partners__arrows {
+        top: auto;
+      }
+    }
+
+    &--show {
+      display: block;
+    }
+  }
+}
+
+.partners__title {
+  margin: 0;
+  @include font-small();
+  padding-right: 100px;
+
+  @include mobile {
+    padding-right: 0;
+  }
+}
+
+.partners__arrows {
+  position: absolute;
+  z-index: 10;
+  right: size-desktop(134px);
+  min-width: 147px;
+  min-height: 40px;
+
+  @include mobile {
+    min-width: 150px;
+    bottom: 110px;
+    right: 51%;
+    transform: translateX(50%);
+  }
+}
+
+.partners__button {
+  @include button-reset();
+  fill: none;
+  height: 42px;
+  width: 67px;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  transition: opacity 0.3s;
+  @include oval-hover();
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../img/oval.svg') no-repeat center;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+
+  &.swiper-button-prev {
+    left: 0;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &.swiper-button-next {
+    right: 0;
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0;
+  }
+
+  @include mobile {
+    &.swiper-button-disabled {
+      opacity: 1;
+    }
+  }
+}
+
+.partners__list {
+  @include list-reset();
+  display: flex;
+  justify-content: flex-start;
+  margin-right: size-desktop(104px);
+  width: 100%;
+
+  @include mobile {
+    margin-right: 0;
+    padding-bottom: 185px;
+  }
+}
+
+.partners__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  position: relative;
+  margin-right: size-desktop(8px);
+
+  &:focus {
+    outline: none;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+}
+
+.partners__img {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+
+  img {
+    height: auto;
+  }
+
+  [alt="Яндекс"] {
+    margin-left: size-desktop(-20px);
+    width: size-desktop(170px);
+  }
+
+  [alt="Splat"] {
+    margin-left: size-desktop(5px);
+    width: size-desktop(84px);
+  }
+
+  [alt="Snickers"] {
+    margin-left: size-desktop(-9px);
+    width: size-desktop(180px);
+  }
+
+  [alt="Манн, Иванов и Фербер"] {
+    margin-left: size-desktop(-40px);
+    margin-top: -32px;
+    width: size-desktop(368px);
+  }
+
+  [alt="PlayStation"] {
+    width: size-desktop(293px);
+  }
+
+  [alt="Google"] {
+    width: size-desktop(140px);
+  }
+
+  .partners--general & {
+    min-height: 96px;
+  }
+
+  .partners--gen-info & {
+    min-height: 180px;
+  }
+
+  .partners--info & {
+    min-height: 150px;
+  }
+
+  .partners--theme & {
+    min-height: 180px;
+  }
+
+  @include desktop-only {
+    [alt="Яндекс"] {
+      width: 170px;
+      margin-left: -20px;
+    }
+
+    [alt="Splat"] {
+      width: 84px;
+    }
+
+    [alt="Snickers"] {
+      width: 180px;
+    }
+
+    [alt="Манн, Иванов и Фербер"] {
+      width: 368px;
+      margin-left: -40px;
+    }
+
+    [alt="PlayStation"] {
+      width: 293px;
+    }
+
+    [alt="Google"] {
+      width: 140px;
+    }
+  }
+
+  @include tablet {
+    [alt="Манн, Иванов и Фербер"] {
+
+      margin-top: -10px;
+
+    }
+  }
+
+  @include mobile {
+    left: 50%;
+    transform: translateX(-50%);
+
+
+    .partners--general &,
+    .partners--gen-info &,
+    .partners--info &,
+    .partners--theme & {
+      min-height: 100px;
+    }
+
+    [alt="Splat"] {
+      margin-left: 0;
+      margin-top: 22px;
+      width: auto;
+      max-width: 100px;
+    }
+
+    [alt="Манн, Иванов и Фербер"] {
+      margin-left: 0;
+      margin-top: -10px;
+      width: auto;
+      max-width: 300px;
+    }
+
+    [alt="Snickers"] {
+      margin-left: 0;
+      margin-top: -30px;
+      width: auto;
+      max-width: 200px;
+    }
+
+    [alt="Яндекс"] {
+      margin-left: 0;
+      margin-top: 22px;
+      width: auto;
+      max-width: 170px;
+    }
+
+    [alt="PlayStation"] {
+      margin-left: 0;
+      margin-top: 35px;
+      width: auto;
+      max-width: 270px;
+    }
+
+    [alt="Google"] {
+      margin-left: 0;
+      max-width: 200px;
+      width: auto;
+    }
+  }
+}
+
+.partners__descr {
+  margin: 0;
+  margin-bottom: size-vh(18px, $height-desktop);
+  @include font-small();
+  width: size-desktop(281px);
+
+  .partners--general & {
+    padding-top: 98px;
+  }
+
+  .partners--gen-info & {
+    padding-top: 162px;
+  }
+
+  .partners--info & {
+    padding-top: 145px;
+  }
+
+  .partners--theme & {
+    padding-top: 165px;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-bottom: 18px;
+
+    .partners--general &,
+    .partners--gen-info &,
+    .partners--info &,
+    .partners--theme & {
+      padding-top: 123px;
+
+    }
+  }
+}
+
+.partners__text {
+  margin: 0;
+  @include font-xs();
+  width: size-desktop(281px);
+
+  @include mobile {
+    width: 100%;
+    line-height: size(24px);
+  }
+}

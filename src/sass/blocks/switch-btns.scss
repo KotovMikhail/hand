@@ -1,0 +1,62 @@
+.switch-btns {
+  display: none;
+
+  @include mobile {
+    display: block;
+    position: relative;
+    z-index: 5;
+    border-top: 2px solid $black;
+    border-bottom: 2px solid $black;
+
+    & > button {
+      position: relative;
+      background: $white;
+      z-index: 5;
+    }
+  }
+}
+
+.switch-btns__hidden-block {
+  display: none;
+  background: $white;
+  position: relative;
+  top: -100px;
+
+  &.opened {
+    display: block;
+    top: 0;
+  }
+}
+
+.switch-btns__btn-select {
+  @include button-reset();
+
+  @include mobile {
+    padding: 28px 16% 28px 7%;
+    @include font-small();
+    text-align: left;
+    position: relative;
+    top: 0;
+    width: 100%;
+
+    &:first-child {
+      &::after {
+        content: "";
+        display: block;
+        width: 14px;
+        height: 24px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 6.5%;
+        background: url("../img/arrow-down.svg") no-repeat center;
+      }
+
+      .switch-btns__hidden-block & {
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+}

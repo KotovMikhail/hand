@@ -1,0 +1,148 @@
+.main {
+  background-color: $bermuda;
+  position: relative;
+  z-index: 2;
+
+  &::after {
+    @include mobile {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      background-image: url("../img/shape1-mobile.svg");
+      background-repeat: no-repeat;
+      background-position: 30% 35%;
+    }
+  }
+}
+
+.main__image {
+  top: size(-1px);
+  right: size(-1px);
+
+  width: 87.5%; // svg width / 1440 * 100%
+  height: 0;
+  padding-top: 48.611%; // svg height / 1440 * 100%
+
+  @include desktop-only {
+    // 1260 - натуральная ширина свг
+    // 700 - натуральная высота свг
+    width: size-vh(1260px, $height-desktop);
+    height: size-vh(700px, $height-desktop);
+    padding-top: 0;
+  }
+
+  @include tablet {
+    top: -3px;
+    right: -15px;
+    width: 950px;
+    height: 527.7px;
+    padding-top: 0;
+  }
+
+  @media (max-height: $height-tablet - 1px) {
+    width: 180vh;
+    padding: 0;
+    height: 100vh;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  img {
+    margin-left: auto;
+    width: auto;
+    height: 115%; // img height / svg height * 100%
+  }
+
+  svg {
+    fill: $bermuda;
+  }
+}
+
+.main__image-wrapper {
+  background-color: $goldenrod;
+}
+
+.main__title {
+  padding-bottom: size(22px);
+  max-width: size(700px);
+
+  @include tablet {
+    padding-bottom: 0;
+    max-width: 450px;
+    margin-left: 5px;
+    margin-bottom: -6px;
+  }
+
+  @media (max-height: $height-tablet - 1px) {
+    max-width: 50%;
+  }
+
+  @include mobile {
+    max-width: calc(100% - 48px);
+    margin: 0 auto 8px;
+  }
+
+  @include mobile-small {
+    max-width: calc(100% - 24px);
+  }
+}
+
+.main__link {
+  margin-left: size(5px);
+  margin-bottom: size-vh(52px, $height-desktop);
+
+  &:hover,
+  &:focus {
+    &::after {
+      transform: scale(1.25);
+    }
+  }
+
+  @media (max-height: $height-tablet - 1px) {
+    margin-bottom: 0;
+  }
+
+  @include tablet {
+    margin-left: 0;
+    margin-bottom: size-vh(25px, $height-tablet);
+  }
+
+  @include mobile {
+    margin-bottom: 8px;
+    margin-left: auto;
+  }
+
+  &.rotated {
+    &::after {
+      transform: rotate(3deg);
+      transition-timing-function: linear;
+    }
+  }
+
+  &--bottom {
+    margin-top: size(27px);
+
+    @include mobile {
+      order: 1;
+      margin: 0;
+      margin-bottom: 52px;
+    }
+  }
+}
+
+.animated .main__link {
+  @include animated-content;
+
+  &:last-child {
+    animation-delay: 1.8s;
+  }
+}

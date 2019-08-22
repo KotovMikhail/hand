@@ -1,0 +1,16 @@
+.event {
+  background-color: $light-wisteria;
+}
+
+.event p {
+  margin: 0;
+  padding-top: size(195px);
+  padding-bottom: size(310px);
+  @include font-xl();
+
+  @include mobile {
+    padding-top: 65px;
+    padding-bottom: 102px;
+    @include font-small();
+  }
+}

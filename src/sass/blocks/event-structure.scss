@@ -1,0 +1,135 @@
+.event-structure {
+  padding-top: size(98px);
+  padding-bottom: size(50px);
+  background-color: $white;
+
+  @include mobile {
+    padding-top: 42px;
+    padding-bottom: 0;
+  }
+}
+
+.event-structure p {
+  margin: 0;
+  margin-bottom: size(59px);
+  @include font-xxl();
+
+  @include mobile {
+    text-align: center;
+    @include font-medium();
+  }
+}
+
+.event-structure__list {
+  @include list-reset();
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: size(23px);
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.event-structure__list li {
+  box-sizing: border-box;
+  padding-top: size(32px);
+  padding-right: size(32px);
+  padding-bottom: size(51px);
+  padding-left: size(32px);
+  min-height: size(368px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: $soft-peach;
+
+  @include tablet {
+    width: 100%;
+    min-height: 0;
+  }
+
+  @include mobile {
+    padding: 30px 26px 40px;
+  }
+
+  &.event-structure__link-card {
+    background-color: $bermuda;
+
+    @include mobile {
+      padding: 41px 31px 31px;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: size(86px);
+
+      & a {
+        margin-left: auto;
+        @include link-reset();
+        width: size(67px);
+        height: size(40px);
+        padding-top: size(12px);
+        padding-right: size(20px);
+        padding-bottom: size(12px);
+        padding-left: size(20px);
+
+        cursor: pointer;
+
+        & svg {
+          fill: $black;
+        }
+      }
+
+      @include mobile {
+        margin-bottom: 63px;
+
+        a {
+          margin-top: -10px;
+          margin-right: -2px;
+        }
+      }
+    }
+
+    h3 {
+      margin-bottom: 0;
+      @include mobile {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.event-structure__list h3 {
+  min-height: size(80px);
+  margin: 0;
+  margin-bottom: size(86px);
+  @include font-medium();
+
+  @include mobile {
+    min-height: 0;
+    margin-bottom: 58px;
+    text-align: center;
+    @include font-small();
+  }
+}
+
+.event-structure__list p {
+  margin: 0;
+  margin-bottom: auto;
+  @include font-xs();
+
+  @include mobile {
+    text-align: center;
+  }
+
+  @include mobile-small {
+    word-break: break-word;
+  }
+}

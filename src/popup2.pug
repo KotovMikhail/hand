@@ -1,0 +1,26 @@
+extends pug/layout.pug
+
+block header
+
+block content
+  section.popup
+    .popup__head
+      .popup__arrows
+        button.popup__arrow.popup__arrow--prev(type="button" aria-label="Стрелка назад")
+          +svg("arrow-right", 48, 32)
+        button.popup__arrow.popup__arrow--next(type="button" aria-label="Стрелка вперед")
+          +svg("arrow-right", 48, 32)
+        button.popup__btn-close(type="button" aria-label="Закрыть попап")
+          +svg("icon-close", 47, 33)
+    .popup__image-block
+      .popup__image
+        img(src="img/main-info1@1x.jpg" srcset="img/main-info1@2x.jpg 2x" width="688" height="643" alt="Воздушно-инженерная школа")
+      button(type="button" aria-label="Стрелка вправо")
+        +svg("arrow-right", 82, 56)
+    .popup__block-info
+      .popup__block
+        p.popup__tags
+          span.popup__tag.popup__tag--wow wow
+          span.popup__tag Экспонент
+
+block footer

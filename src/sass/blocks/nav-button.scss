@@ -1,0 +1,160 @@
+.nav-button {
+  position: absolute;
+  z-index: 100;
+  width: size(250px);
+  padding-top: size(37px);
+
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+
+  @include tablet {
+    padding-top: 35px;
+  }
+
+  @include mobile {
+    display: none;
+    padding-top: 14px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: size(-90px);
+    left: calc(50% - #{size(57px)});
+
+    display: block;
+    box-sizing: border-box;
+    width: size(114px);
+    height: size(114px);
+
+    border: 2px solid $black;
+    border-radius: 50%;
+
+    transition-property: border-width, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: $bounce;
+
+    @include mobile {
+      top: -68px;
+      width: 84px;
+      height: 84px;
+      left: calc(50% - 42px);
+    }
+  }
+
+  &--top {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include mobile {
+      top: 66px;
+    }
+  }
+
+  &--left {
+    left: 0;
+    top: 50%;
+    transform: rotate(-90deg) translateX(-50%);
+    transform-origin: top left;
+
+    @include mobile {
+      top: 0;
+      transform: rotate(-90deg) translateX(-128%);
+    }
+  }
+
+  &--right {
+    right: 0;
+    top: 50%;
+    transform: rotate(90deg) translateX(50%);
+    transform-origin: top right;
+
+    @include mobile {
+      top: 0;
+      transform: rotate(90deg) translateX(128%);
+    }
+  }
+
+  &--bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding-top: 0;
+    padding-bottom: size(37px);
+
+    @include tablet {
+      padding-bottom: 35px;
+    }
+
+    @include mobile {
+      padding-bottom: 19px;
+    }
+
+    &::before {
+      top: auto;
+      bottom: size(-90px);
+
+      @include mobile {
+        bottom: -92px;
+        width: 114px;
+        height: 114px;
+        left: calc(50% - 57px);
+      }
+    }
+  }
+}
+
+body:not(.is-touch) .nav-button:hover,
+.nav-button:focus {
+  &::before {
+    transform: scale(2.6);
+    border-width: 1px;
+
+    @include mobile {
+      transform: scale(3);
+    }
+  }
+}
+
+body:not(.is-touch) .nav-button--bottom:hover,
+.nav-button--bottom:focus {
+  &::before {
+    @include mobile {
+      border-width: 1px;
+      transform: scale(2);
+    }
+  }
+}
+
+.is-main .nav-button {
+  @include mobile {
+    display: block;
+  }
+}
+
+.animated .nav-button {
+  animation-name: fade-in-color;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+
+  &::before {
+    animation-name: show-nav;
+    animation-delay: 1.6s;
+    animation-fill-mode: both;
+    animation-duration: 0.3s;
+    animation-timing-function: light-bounce;
+  };
+
+  &--bottom::before  {
+    animation-name: show-nav-bottom;
+  }
+}

@@ -1,0 +1,99 @@
+extends pug/layout-full.pug
+
+block variables
+  - var title = "Образовательная программа";
+
+block short
+  .page-short.programm-short
+    .cropped-image.programm-short__cropped-image
+      .cropped-image__wrapper.programm-short__image-wrapper
+        img( src="img/programm-short-bg@1x.jpg" srcset="img/programm-short-bg@2x.jpg 2x" width="1071" height="786" alt="Улбающийся парень" )
+      +svg("shape-programm-short", 1100, 700)
+      +svg("shape-programm-mobile", 375, 578)
+
+    .page-short__content.programm-short__content
+      p Образовательная программа
+      h1 Обм#[em е]н п#[em р]акт#[em и]ками
+      p Очно и в онлайн-формате обучаем руководителей технологических кружков эффективному управлению и методике привлечения в инженерное творчество.
+      a.btn-oval.btn-oval--other( href="#" target="_blank" aria-label="Вступить в программу") Вступить в программу
+
+    a.nav-button.nav-button--bottom( href="#more" ) Подробнее
+    a.nav-button.nav-button--right( href="main.html" ) Назад
+
+block full
+  .event
+    .container
+      p Мы помогаем руководителям ресурсных центров, фаблабов, ЦМИТов и всем тем, кто уже увлечен нашей идеей, развивать это сообщество в масштабе всей страны
+
+  .event-structure
+    .container
+      p Структура программы
+
+      ul.event-structure__list
+        li.event-structure__link-card
+          div
+            h3 Онлайн-курс
+            a.btn-oval(href="#" target="_blank" aria-label="Перейти")
+              +svg("arrow-right", 25, 16)
+          p Онлайн-курс спроектирован в модульном формате и является практико&#8209;ориентированным сборником бизнес&#8209;инструментов, направленных на создание новых кружков поколения 2.0 и качественное развитие площадок по работе с детьми и молодежью.
+
+        li
+          div
+            h3 Воркшопы
+          p Запланированные по всей стране мастер-классы  от бизнес-тренеров и экспертов помогут технологическим энтузиастам в развитии конкретных бизнес&#8209;компетенций и формировании сообщества в регионах.
+
+        li
+          div
+            h3 Очные сессии
+          p Очные сессии дважды в год собирают лучших выпускников онлайн-курса и ориентированы на подготовку управленческих команд, способных привить интерес к технологиям у детей и молодежи.
+
+  section.event-programm
+    .container
+      h2 Мероприятия программы
+
+      ul.event-programm__list
+        li
+          a(href="#" target="blank" aria-label="Перейти")
+            h3 Формат мероприятия
+            p Шестая обучающая встреча «Школы общественного действия» #[span #[+svg("arrow-right", 25, 16)]]
+            span 15 марта 2019 | Санкт-Петербург
+        li
+          a(href="#" target="blank" aria-label="Перейти")
+            h3 Формат мероприятия
+            p Шестая обучающая встреча «Школы общественного действия»  #[span #[+svg("arrow-right", 25, 16)]]
+            span 15 марта 2019 | Санкт-Петербург
+        li
+          a(href="#" target="blank" aria-label="Перейти")
+            h3 Формат мероприятия
+            p Шестая обучающая встреча «Школы общественного действия»  #[span #[+svg("arrow-right", 25, 16)]]
+            span 15 марта 2019 | Санкт-Петербург
+        li
+          a(href="#" target="blank" aria-label="Перейти")
+            h3 Формат мероприятия
+            p Шестая обучающая встреча «Школы общественного действия»  #[span #[+svg("arrow-right", 25, 16)]]
+            span 15 марта 2019 | Санкт-Петербург
+        li
+          a(href="#" target="blank" aria-label="Перейти")
+            h3 Формат мероприятия
+            p Шестая обучающая встреча «Школы общественного действия»  #[span #[+svg("arrow-right", 25, 16)]]
+            span 15 марта 2019 | Санкт-Петербург
+        li
+          a(href="#" target="blank" aria-label="Перейти")
+            h3 Формат мероприятия
+            p Шестая обучающая встреча «Школы общественного действия»  #[span #[+svg("arrow-right", 25, 16)]]
+            span 15 марта 2019 | Санкт-Петербург
+
+  section.event-join
+    .container
+      .event-join__wrapper
+        h2 Присоединяй&shy;тесь
+        a.btn-oval.btn-oval--other.event-join__btn(href="#" ) Вступить в программу
+        p Зарегистрируйтесь в программе, чтобы мы могли сделать для вас что-то полезное в ближайшее время или свяжитесь с любым из&nbsp;ответственных лиц.
+
+      ul.event-join__list
+        li
+          p Мария Тучина
+          a(href="mailto:tuchina.me@rvc.ru" target="blank") tuchina.me@rvc.ru
+        li
+          p Антон Шарыпов
+          a(href="mailto:Sharypov.AV@ntifund.rvc.ru" target="blank") Sharypov.AV@ntifund.rvc.ru

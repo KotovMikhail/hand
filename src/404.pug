@@ -1,0 +1,20 @@
+extends pug/layout.pug
+
+block content
+  section.page-404
+    .container
+      .page-404__block
+        h1.page-404__title #[span Ошибка] 404
+        p.page-404__text Такой страницы не существует. Может быть, её переместили, а, может, её никогда не было.
+        p.page-404__text Но лучше на что-то нажать, иначе все элементы засосёт в чёрную дыру.
+      .page-404__collapsar
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M26 52C40.3594 52 52 40.3594 52 26C52 11.6406 40.3594 0 26 0C11.6406 0 0 11.6406 0 26C0 40.3594 11.6406 52 26 52Z" fill="black"/>
+        </svg>
+        button.page-404__btn.btn-oval.btn-oval--main.btn-oval--white(type="button" disabled) Отмотать время
+      .page-404__links
+        a.btn-oval.btn-oval--main.btn-oval--other( href="#" ) Представить проект
+        a.btn-oval.btn-oval--main( href="#" ) Посетить фестиваль
+        a.btn-oval.btn-oval--404( href="main.html" ) На главную
+
+block footer

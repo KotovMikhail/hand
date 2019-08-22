@@ -1,0 +1,38 @@
+.link-download {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  a {
+    @include link-reset();
+    display: block;
+    @include font-xs();
+    text-decoration: underline;
+    transition: opacity 0.3s;
+  }
+
+  a:hover,
+  a:focus {
+    opacity: 0.6;
+  }
+
+  span {
+    display: block;
+    font-size: size(16px);
+    line-height: size(24px);
+    color: rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+  }
+
+  @include mobile {
+    a {
+      text-decoration: none;
+    }
+  }
+}

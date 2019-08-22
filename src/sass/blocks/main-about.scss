@@ -1,0 +1,143 @@
+.main-about {
+  background-color: $tickle-me-pink;
+  padding-bottom: size-vh(115px, $height-desktop);
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  @include mobile {
+    min-height: auto;
+    padding-bottom: 38px;
+  }
+}
+
+.main-about__image-wrapper {
+  background: $tickle-me-pink;
+  z-index: -1;
+
+  @include mobile {
+    background-color: $goldenrod;
+  }
+}
+
+.main-about__image {
+  width: 76.5%;
+  height: 0;
+  padding-top: 83.5%;
+  z-index: 0;
+  top: -350px;
+  left: -2px;
+
+  &--mobile {
+    display: none;
+  }
+
+  img {
+    width: auto;
+    height: 68.9%;
+    margin-top: 34%;
+  }
+
+  svg {
+    fill: $tickle-me-pink;
+  }
+
+  @include desktop-only {
+    width: size-vh(1100px, $height-desktop);
+    height: size-vh(1200px, $height-desktop);
+    padding-top: 0;
+  }
+
+  @include tablet {
+    top: -300px;
+    width: 800px;
+    height: 873px;
+    padding-top: 0;
+  }
+
+  @include tablet-media {
+    top: -300px;
+  }
+
+  @include mobile {
+    display: none;
+    width: 715px;
+    height: 397px;
+    top: 33px;
+    left: 35%;
+    transform: translateX(-50%);
+
+    &--mobile {
+      display: block;
+
+      img {
+        width: 71%;
+        margin-top: 32px;
+        margin-left: 56.5%;
+        transform: translateX(-50%);
+        height: auto;
+
+      }
+    }
+  }
+}
+
+.main-about__title {
+  margin: 0;
+  @include font-xl();
+  margin-bottom: size-vh(35px, $height-desktop);
+  padding-top: size-vh(235px, $height-desktop);
+  float: right;
+  margin-right: size-desktop(35px);
+  width: size-desktop(656px);
+
+  @include tablet {
+    @include font-large();
+  }
+
+  @include tablet-media {
+    width: auto;
+    padding-left: 25%;
+  }
+
+  @include mobile {
+    font-size: size(32px);
+    line-height: size(36px);
+    padding: 0 20px;
+    padding-top: 480px;
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 48px;
+  }
+
+  @include mobile-small {
+    @include font-small();
+  }
+}
+
+.main-about__descr {
+  margin: 0;
+  margin-right: size-desktop(32px);
+  margin-bottom: size-vh(35px, $height-desktop);
+  @include font-small();
+  float: right;
+  width: size-desktop(656px);
+
+  @include tablet-media {
+    width: auto;
+    padding-left: 25%;
+  }
+
+  @include mobile {
+    width: auto;
+    @include font-xs();
+    margin-bottom: 25px;
+    margin-right: 0;
+    padding-left: 0;
+  }
+}
